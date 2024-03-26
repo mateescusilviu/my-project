@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.css">
+    <script src='fullcalendar-6.1.11/dist/index.global.min.js'></script>
+    <script src="node_modules/sql.js/dist/sql-wasm.js"></script>
+    <script src='script.js'></script>
+</head>
+<body>
+    <h2>Calendar Principal</h2>
+    <div id='calendar' class='calendar'></div>
+    <h2>Camera 2</h2>
+    <div id='camera2' class='calendar'></div>
+    <h2>Camera 4</h2>
+    <div id='camera4' class='calendar'></div>
+    <h2>Camera 5</h2>
+    <div id='camera5' class='calendar'></div>
+    <h2>Camera 6</h2>
+    <div id='camera6' class='calendar'></div>
+    <h2>Camera 7</h2>
+    <div id='camera7' class='calendar'></div>
+    <h2>Camera 8</h2>
+    <div id='camera8' class='calendar'></div>
+    <h2>Camera 9</h2>
+    <div id='camera9' class='calendar'></div>
+    <h2>Camera 10</h2>
+    <div id='camera10' class='calendar'></div>
+    <h2>Camera 11</h2>
+    <div id='camera11' class='calendar'></div>
+    <h2>Camera Deluxe</h2>
+    <div id='cameraDeluxe' class='calendar'></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Interogarea SQL pe care vrei să o execuți
+            let sqlQuery = "SELECT * FROM rezervari"
+            
+            // Execută interogarea SQL folosind window.api.runSql
+            let result = window.api.runSql(sqlQuery)
+            
+            // Afișează rezultatul în consolă
+            console.log(result)
+            console.log(typeof FullCalendar);
+        });
+        </script>
+</body>
+</html>
